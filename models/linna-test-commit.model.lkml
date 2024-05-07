@@ -13,3 +13,5 @@ persist_with: linna_test_commit_default_datagroup
 
 
 # test-edit
+
+# test-edit-after-delete-file
