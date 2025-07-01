@@ -32,6 +32,15 @@ view: orders {
     # hidden: yes
     sql: ${TABLE}.user_id ;;
   }
+
+  measure: count_relative_change_to_previous_month{
+    type: period_over_period
+    based_on: count
+    based_on_time: created_month
+    kind: relative_change
+    period: month
+    value_to_date: yes
+  }
   measure: count {
     type: count
     drill_fields: [detail*]
@@ -40,13 +49,13 @@ view: orders {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	users.last_name,
-	users.id,
-	users.first_name,
-	order_items.count,
-	orders_sample.count
-	]
+  id,
+  users.last_name,
+  users.id,
+  users.first_name,
+  order_items.count,
+  orders_sample.count
+  ]
   }
 
 }
