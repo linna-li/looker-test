@@ -46,6 +46,39 @@ view: orders {
     drill_fields: [detail*]
   }
 
+  measure: total_orders {
+    type: count
+    drill_fields: [detail*]
+  }
+
+  measure: total_orders_completed {
+    type: count
+    filters: [status: "complete"]
+    drill_fields: [detail*]
+  }
+
+  measure: total_orders_cancelled {
+    type: count
+    filters: [status: "cancelled"]
+    drill_fields: [detail*]
+  }
+
+  measure: percent_of_total_orders_completed {
+    label: "% of Total Orders Completed"
+    type: number
+    sql: SAFE_DIVIDE(${total_orders_completed},${total_orders}) ;;
+    value_format_name: percent_1
+    drill_fields: [detail*]
+  }
+
+  measure: percent_of_total_orders_cancelled {
+    label: "% of Total Orders Cancelled"
+    type: number
+    sql: SAFE_DIVIDE(${total_orders_cancelled},${total_orders}) ;;
+    value_format_name: percent_1
+    drill_fields: [detail*]
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
