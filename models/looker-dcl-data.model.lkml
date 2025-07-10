@@ -2,6 +2,8 @@ connection: "looker-dcl-data"
 
 # include all the views
 include: "/views/**/*.view.lkml"
+include: "/Dashboards/test.dashboard.lookml"
+
 
 datagroup: looker_dcl_data_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;

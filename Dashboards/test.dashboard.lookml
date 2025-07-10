@@ -4,7 +4,6 @@
   preferred_viewer: dashboards-next
   description: 'This is a reproduction attempt'
   filters_location_top: false
-  include: "*.dashboard.lookml"
   elements:
     - name: ''
       type: text
@@ -18,12 +17,8 @@
         \  vertical-align: middle;\n\n    cursor: pointer;\n\n    user-select: none;\n\
         \n    padding: 10px;\n\n    margin-right: 15px;\n\n   margin-top: 15px;\n\n\
         \    font-size: 1rem;\n\n    background: #101328;\n\n    line-height: 1.5;\n\
-        \n    border-radius: 5px;\"\n\n    href=\"https://glg.alationcloud.com/article/1268\"\
-        > \n\nDashboard Details\n\n</a>\n\n<a style=\"\n\n\tcolor: #ffffff;\n\n    border:\
-        \ solid 0px #ffffff;\n\n    float: left;\n\n    font-weight: 400;\n\n    text-align:\
-        \ center;\n\n    vertical-align: middle;\n\n    cursor: pointer;\n\n    user-select:\
-        \ none;\n\n    padding: 10px;\n\n    margin-top: 15px;\n\n    font-size: 1rem;\n\
-        \n    background: #101328;\n\n    line-height: 1.5;\n\n    border-radius: 5px;\"\
+        \n    border-radius: 5px;\"\n\n
+        > \n\nDashboard Details\n\n</a>\n\n
         </div>"
       row: 0
       col: 0
@@ -32,9 +27,9 @@
     - title: __
       name: __
       model: looker-dcl-data
-      explore: Products
+      explore: products
       type: single_value
-      fields: [Rank]
+      fields: [products.rank]
       limit: 1
       column_limit: -1
       query_timezone: America/New_York
