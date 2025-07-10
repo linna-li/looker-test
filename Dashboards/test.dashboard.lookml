@@ -4,6 +4,7 @@
   preferred_viewer: dashboards-next
   description: 'This is a reproduction attempt'
   filters_location_top: false
+  include: "*.dashboard.lookml"
   elements:
     - name: ''
       type: text
