@@ -231,3 +231,48 @@
       totals_color: "#808080"
       defaults_version: 1
       hidden_pivots: {}
+
+      filters:
+    - name: products
+      title: products item name
+      type: field_filter
+      default_value: ''
+      allow_multiple_values: true
+      required: false
+      ui_config:
+        type: advanced
+        display: popover
+      model: looker-dcl-data
+      explore: products
+      listens_to_filters: []
+      field: products.item_name
+
+    - name: products id
+      title: products id
+      type: field_filter
+      default_value: ''
+      allow_multiple_values: true
+      required: false
+      ui_config:
+        type: advanced
+        display: popover
+        options: []
+      model: looker-dcl-data
+      explore: products
+      listens_to_filters: []
+      field: products.id
+
+    - name: category
+      title: category
+      type: field_filter
+      default_value: 2 year
+      allow_multiple_values: true
+      required: true
+      ui_config:
+        type: advanced
+        display: overflow
+        options: []
+      model: looker-dcl-data
+      explore: products
+      listens_to_filters: []
+      field: products.category
