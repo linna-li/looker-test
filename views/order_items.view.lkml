@@ -25,6 +25,7 @@ view: order_items {
     type: number
     sql: ${TABLE}.sale_price ;;
     value_format: "$#,##0.00"
+    hidden: yes
   }
   measure: count {
     type: count
