@@ -30,4 +30,11 @@ view: order_items {
     type: count
     drill_fields: [id, inventory_items.id, orders.id]
   }
+  measure: total_revenue {
+    type: sum
+    sql: ${sale_price} ;; # Sums the sale_price dimension
+    value_format: "$#,##0.00" # Applies the same formatting
+    label: "Total Revenue (USD)"
+    description: "Total revenue across all orders or selected segments, formatted as currency."
+  }
 }
